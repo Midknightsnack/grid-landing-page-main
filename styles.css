@@ -1,6 +1,6 @@
 body{
   font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
+  /* font-optical-sizing: auto; */
   background-color: hsl(228, 99%, 58%);
   color: hsl(0, 0%, 100%);
   /* font-weight: 100;
@@ -13,6 +13,16 @@ header{
   align-items: center;
   padding: 1rem 3rem;
   border-bottom: 2px solid hsl(220, 100%, 64%);
+}
+
+p{
+  font-size: 1.063rem; /* 17px */
+}
+
+h1{
+  font-size: 4rem;
+  font-weight: 500;
+  /* margin-bottom: 1; */
 }
 
 button{
@@ -42,8 +52,16 @@ main{
   flex-direction: column;
   justify-content: center;
   border-right: 2px solid hsl(220, 100%, 64%);
-  padding: 3rem;
+  padding: 0rem 20rem 0rem 3rem;
   /* gap: 1rem; */
+}
+
+.heading-desc{
+  margin-top: 0;
+  padding-right: 7rem;
+  line-height: 2;
+  letter-spacing: 1px;
+  font-weight: 400;
 }
 
 .right-panel{
@@ -73,6 +91,13 @@ main{
   /* gap: 1rem; */
 }
 
+.stat-num{
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
 .sub-item-bottom{
   grid-row: 3;
   /* display: flex;
@@ -95,11 +120,17 @@ main{
 
 .item-title{
   margin-bottom: 0;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .item-desc{
   margin-top: 0;
   padding-top: 0.5rem;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
 footer{
