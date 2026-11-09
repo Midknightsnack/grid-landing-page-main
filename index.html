@@ -23,13 +23,17 @@
   <!-- Nav -->
   <header>
     <p>● Bridge Collective</p>
-    <button><img src="assets/images/icon-menu.svg" alt="menu-icon"></button>
+    <button onclick="toggleMenu()" id="imageToggleBtn" class="menu-toggle">
+      <img src="assets/images/icon-menu.svg" alt="menu-icon" id="btn-img">
+    </button>
   </header>
+
+  <div id="menuOverlay" class="menu-overlay" onclick="toggleMenu()"></div>
 
   <!-- Hero -->
   <main>
     <section class="left-panel">
-      <h1>A classroom <br>for every child.</h1>
+      <h1 class="heading">A classroom for every child.</h1>
       <p class="heading-desc">We fund the schools, train the teachers, and measure what works — 
       so every child we reach today becomes a graduate tomorrow.</p>
     </section>
@@ -80,6 +84,17 @@
         </div>
       </section>
     </section>
+
+    <!-- Menu panel — hidden until the hamburger is activated -->
+    <nav id="rightSideMenu" class="side-menu">
+      <ul class="menu-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Our Work</a></li>
+        <li><a href="#">Partners</a></li>
+        <li><a href="#">Annual Report</a></li>
+        <li><a href="#">Donate</a></li>
+      </ul>
+    </nav>
   </main>
 
   <!-- Footer -->
@@ -88,17 +103,7 @@
     <p>Registered charity 12345678</p>
   </footer>
 
-  <!-- Menu panel — hidden until the hamburger is activated -->
-  <nav>
-    <ul>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Our Work</a></li>
-      <li><a href="#">Partners</a></li>
-      <li><a href="#">Annual Report</a></li>
-      <li><a href="#">Donate</a></li>
-    </ul>
-  </nav>
-
+  <script src="script.js"></script>
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.

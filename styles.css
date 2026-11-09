@@ -1,10 +1,8 @@
 body{
   font-family: "Inter", sans-serif;
-  /* font-optical-sizing: auto; */
   background-color: hsl(228, 99%, 58%);
   color: hsl(0, 0%, 100%);
-  /* font-weight: 100;
-  font-style: normal; */
+  margin: 0;
 }
 
 header{
@@ -14,6 +12,7 @@ header{
   padding: 1rem 3rem;
   border-bottom: 2px solid hsl(220, 100%, 64%);
   font-size: 0.875rem;
+  z-index: 2;
 }
 
 p{
@@ -23,14 +22,12 @@ p{
 h1{
   font-size: 4rem;
   font-weight: 500;
-  /* margin-bottom: 1; */
 }
 
 button{
   background-color: hsl(228, 99%, 58%);
   color: hsl(0, 0%, 100%);
   border: none;
-  /* padding: 0.5rem 1rem; */
   border-radius: 0.25rem;
   cursor: pointer;
 }
@@ -42,10 +39,6 @@ button:hover{
 main{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* gap: 2rem; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* padding: 0rem 3rem; */
 }
 
 .left-panel{
@@ -53,13 +46,16 @@ main{
   flex-direction: column;
   justify-content: center;
   border-right: 2px solid hsl(220, 100%, 64%);
-  padding: 0rem 20rem 0rem 3rem;
-  /* gap: 1rem; */
+  padding: 0rem 15rem 0rem 3rem;
+}
+
+.heading{
+  margin-top: 0;
+  line-height: 1.2;
 }
 
 .heading-desc{
   margin-top: 0;
-  padding-right: 7rem;
   line-height: 2;
   letter-spacing: 1px;
   font-weight: 400;
@@ -69,12 +65,11 @@ main{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  /* gap: 1rem; */
 }
 
 .sub-item{
   display: grid;
-  /* Row 1: content size, Row 2: 200px empty gap, Row 3: content size */
+  /* Row 1: content size, Row 2: 10rem empty gap, Row 3: content size */
   grid-template-rows: auto 10rem auto; 
   padding: 2rem;
 }
@@ -89,7 +84,6 @@ main{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* gap: 1rem; */
 }
 
 .stat-num{
@@ -101,8 +95,6 @@ main{
 
 .sub-item-bottom{
   grid-row: 3;
-  /* display: flex;
-  flex-direction: column; */
   margin-top:0;
 }
 
@@ -141,4 +133,58 @@ footer{
   padding: 1rem 3rem;
   border-top: 2px solid hsl(220, 100%, 64%);
   font-size: 0.875rem;
+}
+
+.side-menu {
+  position: fixed;
+  right: -32rem; 
+  width: 28rem;
+  height: calc(100vh); /* Fill remaining vertical screen space */
+  background-color: hsl(228, 99%, 58%);
+  color: white;
+  transition: right 0.3s ease-in-out;
+  z-index: 1; /* Right below the header, but above the overlay */
+  padding: 1.25rem; /* Reduced since it's already below the header */
+}
+
+.side-menu.open {
+  right: 0;
+}
+
+.menu-overlay {
+  position: fixed;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh); /* Only dims what is below the header */
+  background-color: hsl(0, 0%, 0%);
+  z-index: 0; /* Behind the side menu */
+  
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.menu-overlay.open {
+  opacity: 0.5;
+  pointer-events: auto;
+}
+
+.menu-links{
+  list-style: none;
+  text-align: right;
+  padding: 2rem 3rem;
+  margin: 0;
+}
+
+.menu-links li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 4rem;
+}
+
+.menu-links li a:hover {
+  text-decoration: underline;
 }
