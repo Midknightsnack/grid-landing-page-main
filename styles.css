@@ -1,7 +1,16 @@
+:root{
+  --white: hsl(0, 0%, 100%);
+  --blue-200: hsl(224, 100%, 95%);
+  --blue-400: hsl(220, 100%, 64%);
+  --blue-600: hsl(228, 100%, 60%);
+  --blue-700: hsl(228, 99%, 58%);
+  --black: hsl(0, 0%, 0%);
+}
+
 body{
   font-family: "Inter", sans-serif;
-  background-color: hsl(228, 99%, 58%);
-  color: hsl(0, 0%, 100%);
+  background-color: var(--blue-700);
+  color: var(--white);
   margin: 0;
 }
 
@@ -10,7 +19,7 @@ header{
   justify-content: space-between;
   align-items: center;
   padding: 1rem 3rem;
-  border-bottom: 2px solid hsl(220, 100%, 64%);
+  border-bottom: 2px solid var(--blue-400);
   font-size: 0.875rem;
   z-index: 2;
 }
@@ -25,15 +34,15 @@ h1{
 }
 
 button{
-  background-color: hsl(228, 99%, 58%);
-  color: hsl(0, 0%, 100%);
+  background-color: var(--blue-700);
+  color: var(--white);
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
 }
 
 button:hover{
-  background-color: hsl(220, 100%, 64%);
+  background-color: var(--blue-400);
 }
 
 main{
@@ -45,7 +54,7 @@ main{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-right: 2px solid hsl(220, 100%, 64%);
+  border-right: 2px solid var(--blue-400);
   padding: 0rem 8rem 0rem 3rem;
 }
 
@@ -75,7 +84,7 @@ main{
 }
 
 .sub-item:hover{
-  background-color:hsl(228, 100%, 60%);
+  background-color: var(--blue-600);
   cursor: pointer;
 }
 
@@ -99,16 +108,16 @@ main{
 }
 
 .item1{
-  border-bottom: 2px solid hsl(220, 100%, 64%);
-  border-right: 2px solid hsl(220, 100%, 64%);
+  border-bottom: 2px solid var(--blue-400);
+  border-right: 2px solid var(--blue-400);
 }
 
 .item2{
-  border-bottom: 2px solid hsl(220, 100%, 64%);
+  border-bottom: 2px solid var(--blue-400);
 }
 
 .item3{
-  border-right: 2px solid hsl(220, 100%, 64%);
+  border-right: 2px solid var(--blue-400);
 }
 
 .item-title{
@@ -131,7 +140,7 @@ footer{
   justify-content: space-between;
   align-items: center;
   padding: 1rem 3rem;
-  border-top: 2px solid hsl(220, 100%, 64%);
+  border-top: 2px solid var(--blue-400);
   font-size: 0.875rem;
 }
 
@@ -140,8 +149,8 @@ footer{
   right: -32rem; 
   width: 28rem;
   height: calc(100vh); /* Fill remaining vertical screen space */
-  background-color: hsl(228, 99%, 58%);
-  color: white;
+  background-color: var(--blue-700);
+  color: var(--white);
   transition: right 0.3s ease-in-out;
   z-index: 1; /* Right below the header, but above the overlay */
   padding: 1.25rem;
@@ -156,7 +165,7 @@ footer{
   left: 0;
   width: 100vw;
   height: calc(100vh); /* Only dims what is below the header */
-  background-color: hsl(0, 0%, 0%);
+  background-color: var(--black);
   z-index: 0; /* Behind the side menu */
   
   opacity: 0;
@@ -178,7 +187,7 @@ footer{
 
 .menu-links li a {
   display: block;
-  color: white;
+  color: var(--white);
   text-decoration: none;
   font-size: 2.5rem;
   font-weight: 500;
@@ -201,7 +210,7 @@ footer{
   }
 
   .left-panel{
-    border-bottom: 2px solid hsl(220, 100%, 64%);
+    border-bottom: 2px solid var(--blue-400);
     padding: 2rem;
   }
 
@@ -210,11 +219,11 @@ footer{
   }
 
   .item1{
-    border-bottom: 2px solid hsl(220, 100%, 64%);
+    border-bottom: 2px solid var(--blue-400);
   }
 
   .item3{
-    border-bottom: 2px solid hsl(220, 100%, 64%);
+    border-bottom: 2px solid var(--blue-400);
   }
 
   .side-menu {
