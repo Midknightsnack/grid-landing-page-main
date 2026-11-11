@@ -12,9 +12,9 @@ function toggleMenu() {
 
     if (img.src.includes(openIcon)) {
         img.src = closeIcon;
-        button.setAttribute('aria-expanded', 'Menu');
+        button.setAttribute('aria-expanded', true);
     } else {
         img.src = openIcon;
-        button.setAttribute('aria-expanded', 'Close');
+        button.setAttribute('aria-expanded', false);
     }
 }
